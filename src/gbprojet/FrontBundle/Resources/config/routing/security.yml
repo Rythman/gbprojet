@@ -1,0 +1,13 @@
+gbprojet_Front_security_login:
+    path:     /login
+    defaults: { _controller: gbprojetFrontBundle:Security:login }
+
+gbprojet_Front_security_check:
+    path:     /login-check
+    defaults: { _controller: gbprojetFrontBundle:Security:check }
+    requirements:
+        _method: POST
+
+gbprojet_Front_security_logout:
+    path:     /logout
+    defaults: { _controller: gbprojetFrontBundle:Security:logout }

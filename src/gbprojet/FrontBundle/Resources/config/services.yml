@@ -1,0 +1,12 @@
+services:
+    user.form.profile.type:
+        class: gbprojet\FrontBundle\Form\Type\ProfileType
+        parent: fos_user.profile.form.type
+        tags:
+            - { name: form.type, alias: gbprojet_fos_user_profile }
+
+    user.form.register.type:
+        class: gbprojet\FrontBundle\Form\Type\RegisterType
+        parent: fos_user.registration.form.type
+        tags:
+            - { name: form.type, alias: gbprojet_fos_user_register }

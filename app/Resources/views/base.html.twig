@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+        <link href="{{ asset('bundles/front/css/bootstrap.css') }}" rel="stylesheet" />
+         <!-- FONTAWESOME STYLES-->
+       
+        <link href="{{ asset('bundles/front/css/font-awesome.css') }}" rel="stylesheet" />
+            <!-- CUSTOM STYLES-->
+        <link href="{{ asset('bundles/front/css/custom.css') }}" rel="stylesheet" />
+         <!---->
+             <!-- CUSTOM STYLES-->
+        <link href="{{ asset('bundles/front/css/disponibilite.css') }}" rel="stylesheet" />
+         <!---->
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}
+            
+            
+            {#----------- entete du site ---------------- #}
+            <div>
+            
+                {% block header %}
+                     
+                {% endblock %}
+            </div>    
+            {# Fin entete du site #}
+            
+            {#----------- Corps du site ---------------- #}
+            <div>
+            
+                {% block content %}
+                     ici le corps de la page 
+                {% endblock %}
+            </div>    
+            {# Fin corps du site #}
+            
+        
+        {% endblock %}
+        {% block javascripts %}
+        <script src="{{ asset('bundles/front/js/jquery-1.10.2.js') }}"></script>
+        <script src="{{ asset('bundles/front/js/bootstrap.min.js') }}"></script>
+        
+         <script src="{{ asset('bundles/front/js/custom.js') }}"></script>
+         <script src="{{ asset('bundles/front/js/general.js') }}"></script>
+         <script src="{{ asset('bundles/front/js/jquery.metisMenu.js') }}"></script>
+         <script src="{{ asset('bundles/front/js/jquery-ui-1.10.1.custom.min.js')}}"></script>
+        {% endblock %}
+    </body>
+</html>

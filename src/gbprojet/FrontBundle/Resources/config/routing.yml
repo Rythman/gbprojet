@@ -1,0 +1,15 @@
+front_homepage:
+    pattern:     /
+    defaults: { _controller: FrontBundle:Home:index }
+    
+front_programmation:
+    pattern:     /programmation/{grade}-{niveau}
+    defaults: { _controller: FrontBundle:Programmation:programmation }
+
+front_disponibilite:
+    pattern:     /disponibilite/{app_ufr}ufr
+    defaults: { _controller: FrontBundle:Disponibilite:disponibilite }
+
+# SECURITY
+gbprojet_Front_security:
+    resource:  "@FrontBundle/Resources/config/routing/security.yml"

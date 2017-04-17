@@ -1,0 +1,173 @@
+{% extends 'FrontBundle::model.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    
+{% endblock %}
+   
+   {% block contenu %}
+       
+       <div class="section-title center">
+           <h2>DISPONIBILITE DE SALLE (CM/TP/TD) DANS {{app_ufr|upper}} UFR</h2>
+            <div class="line">
+                <hr>
+            </div>
+            <div class="clearfix"></div>
+            <small><em></em></small>            
+        </div>
+        <form action="#" method="POST">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group col-md-6 col-sm-6">
+                        <label for="exampleInputPassword1">DATE DEBUT</label>
+                        <input type="date" class="form-control" id="" placeholder="Entrer la date">
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6">
+                        <label for="exampleInputPassword1">DATE FIN</label>
+                        <input type="date" class="form-control" id="" placeholder="Entrer la date">
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6">
+                        <label for="exampleInputPassword1">HEURE DEBUT</label>
+                        <input type="time" class="form-control" id="" placeholder="">
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6">
+                        <label for="exampleInputPassword1">HEURE FIN</label>
+                        <input type="time" class="form-control" id="" placeholder="">
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn tf-btn btn-default center">Valider</button>
+        </form>
+       
+       
+       
+    <!-- Tableau contenant le resultat de la demande -->
+        
+               
+        <div class="panel-body">
+            
+                
+            <ul id="ul-filtrer-resultat-par-type" class="clearfix center-block">
+                <li class="">Filtrer le résultat</li>
+                <li class=""><label for="allType">Tous <input type="radio" value="allType" name="type-de-salle" id="allType" /></label></li>
+                <li class=""><label for="Amphitype">Amphitheatre <input type="radio" value="Amphi" name="type-de-salle" id="amphiType" /></label></li>
+                <li class=""><label for="salleTDType">Salle TD <input type="radio" value="salle TD" name="type-de-salle" id="salleTDType" /></label></li>
+                <li class=""><label for="salleTPType">Salle TP <input type="radio" value="Salle TP" name="type-de-salle" id="salleTPType" /></label></li>
+            </ul>
+                
+         <div class="table-responsive">
+                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                    <thead>
+                        <tr>
+                            <th>SALLES</th>
+                            <th>BATIMENT</th>
+                            <th>CAPACITE(Nombre de personnes)</th>
+                            <th>TYPE</th>
+                            <th>UFR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="Amphitheatre">
+                            <td>AMPHI A</td>
+                            <td></td>
+                            <td>1500</td>
+                            <td class="center">Amphitheatre</td>
+                            <td class="center">MI/SSMT</td>
+                        </tr>
+                        <tr class="Amphitheatre">
+                            <td>AMPHI B</td>
+                            <td></td>
+                            <td>1500</td>
+                            <td class="center">Amphitheatre</td>
+                            <td class="center">MI/SSMT</td>
+                        </tr>
+                        <tr class="Amphitheatre">
+                            <td>AMPHI C</td>
+                            <td></td>
+                            <td>1500</td>
+                            <td class="center">Amphitheatre</td>
+                            <td class="center">BIOSCIENCES</td>
+                        </tr>
+                        <tr class="Amphitheatre">
+                            <td>AMPHI STRM</td>
+                            <td></td>
+                            <td>1500</td>
+                            <td class="center">Amphitheatre</td>
+                            <td class="center">STRM</td>
+                        </tr>
+                        <tr class="Amphitheatre">
+                            <td>AMPHI 6</td>
+                            <td></td>
+                            <td>1500</td>
+                            <td class="center">Amphitheatre</td>
+                            <td class="center">MEDECINE</td>
+                        </tr>
+                        <tr class="Amphitheatre">
+                            <td>LEON ROBERT</td>
+                            <td></td>
+                            <td>1500</td>
+                            <td class="center">Amphitheatre</td>
+                            <td class="center">SHS/LLC</td>
+                        </tr>
+                        <tr class="salleTD">
+                            <td>101</td>
+                            <td>Batiment Maths-Info</td>
+                            <td>60</td>
+                            <td class="center">Salle de TD</td>
+                            <td class="center">MI</td>
+                        </tr>
+                        <tr class="salleTD">
+                            <td>102</td>
+                            <td>Batiment Maths-Info</td>
+                            <td>60</td>
+                            <td class="center">Salle de TD</td>
+                            <td class="center">MI</td>
+                        </tr>
+                         <tr class="salleTD">
+                            <td>201</td>
+                            <td>Batiment Maths-Info</td>
+                            <td>60</td>
+                            <td class="center">Salle de TD</td>
+                            <td class="center">MI</td>
+                        </tr>
+                        <tr class="salleTD">
+                            <td>202</td>
+                            <td>Batiment Maths-Info</td>
+                            <td>60</td>
+                            <td class="center">Salle de TD</td>
+                            <td class="center">MI</td>
+                        </tr>
+                        <tr class="salleTP">
+                            <td>A</td>
+                            <td>Batiment PRO</td>
+                            <td>20</td>
+                            <td class="center">Salle de TP</td>
+                            <td class="center">SSMT</td>
+                        </tr>
+                        <tr class="salleTP">
+                            <td>B</td>
+                            <td>Batiment PRO</td>
+                            <td>20</td>
+                            <td class="center">Salle de TP</td>
+                            <td class="center">SSMT</td>
+                        </tr>
+                         <tr class="Amphitheatre">
+                            <td>A</td>
+                            <td>ODONTO</td>
+                            <td>100</td>
+                            <td class="center">Amphitheatre</td>
+                            <td class="center">ODONTO</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+            <!-- END Tableau contenant le resultat de la demande  -->
+
+   {% endblock %}
+   
+{% block javascripts %}
+    {{ parent() }}
+     <script src="{{ asset('bundles/front/js/disponibilite.js')}}"></script>
+{% endblock %}

@@ -1,0 +1,96 @@
+<?php
+
+namespace gbprojet\MainBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * departement
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="gbprojet\MainBundle\Entity\departementRepository")
+ */
+class departement
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+    
+    /**
+     *
+     * @ORM\ManyToOne(targetEntity="gbprojet\MainBundle\Entity\ufr")
+     * @ORM\JoinColumn(nullable=False)
+     */
+    private $ufr;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="designation", type="string", length=255)
+     */
+    private $designation;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set designation
+     *
+     * @param string $designation
+     *
+     * @return departement
+     */
+    public function setDesignation($designation)
+    {
+        $this->designation = $designation;
+
+        return $this;
+    }
+
+    /**
+     * Get designation
+     *
+     * @return string
+     */
+    public function getDesignation()
+    {
+        return $this->designation;
+    }
+
+    /**
+     * Set ufr
+     *
+     * @param \gbprojet\MainBundle\Entity\ufr $ufr
+     *
+     * @return departement
+     */
+    public function setUfr(\gbprojet\MainBundle\Entity\ufr $ufr)
+    {
+        $this->ufr = $ufr;
+
+        return $this;
+    }
+
+    /**
+     * Get ufr
+     *
+     * @return \gbprojet\MainBundle\Entity\ufr
+     */
+    public function getUfr()
+    {
+        return $this->ufr;
+    }
+}

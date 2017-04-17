@@ -1,0 +1,69 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 7 avr. 2017, 21:30:36
+    Author     : Moro
+*/
+
+
+#ul-filtrer-resultat-par-type{list-style: none; display: block;
+margin: 20px 0; padding-left: 0; border: 1px solid #000; min-height: 35px;}
+
+
+
+#ul-filtrer-resultat-par-type > li{display: inline-block; vertical-align: middle;}
+
+
+#ul-filtrer-resultat-par-type > li,#ul-filtrer-resultat-par-type > li>label{
+    text-align: center;
+    float: none;
+    font-size: 16pt;
+    font-weight: 400;
+    
+}
+#ul-filtrer-resultat-par-type > li>label{
+    margin: 8px 0;
+}
+#ul-filtrer-resultat-par-type > li > label >input[type='radio']{
+    width: 30px;
+    height: 15px;
+   -webkit-height: 15px;
+   margin-top: 8px;
+}
+
+#ul-filtrer-resultat-par-type > li:nth-child(1){
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    height: 100%;
+}
+
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: rgba(34, 209, 84, 0.21);
+    color: #222;
+}
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+    border: 1px solid rgba(34, 209, 84, 0.31);
+}
+
+
+/***************************************/
+/*******MEDIA QUERY(RESPONSIVE)********/
+/*************************************/
+
+@media (max:767px){
+    
+}
+
+@media (min-width:1024px){
+    #ul-filtrer-resultat-par-type > li:first-child{
+        width: 100%;
+    }
+    #ul-filtrer-resultat-par-type > li{
+        width: 24%;
+    }
+}
